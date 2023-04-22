@@ -11,8 +11,8 @@ const WrappedSingleListItem = ({
 }) => {
   return (
     <li
-      style={{ backgroundColor: isSelected ? 'green' : 'red'}}
-      onClick={()=>onClickHandler(index)}
+      style={{ backgroundColor: isSelected ? 'green' : 'red' }}
+      onClick={() => onClickHandler(index)}
     >
       {text}
     </li>
@@ -45,28 +45,29 @@ const WrappedListComponent = ({
   return (
     <ul style={{ textAlign: 'left' }}>
       {
-      items.map((item, index) => {
-        console.log(item.text)
-        console.log((index===selectedIndex)?true:false)
-        return(
-        <SingleListItem
-          onClickHandler={(index) => handleClick(index)}
-            text={item.text}
-            index={index}
-            isSelected={(index===selectedIndex)?true:false}
+        items.map((item, index) => {
+          console.log(item.text)
+          console.log((index === selectedIndex) ? true : false)
+          return (
+            <SingleListItem
+              onClickHandler={(index) => handleClick(index)}
+              text={item.text}
+              index={index}
+              isSelected={(index === selectedIndex) ? true : false}
+
             />)
-            })
-        }
+        })
+      }
     </ul>
   )
 };
 
 WrappedListComponent.propTypes = {
-    items: PropTypes.arrayOf(
-        PropTypes.shape({
-          text: PropTypes.string.isRequired,
-        })
-      ),
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 WrappedListComponent.defaultProps = {
