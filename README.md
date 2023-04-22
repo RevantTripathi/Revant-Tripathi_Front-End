@@ -1,12 +1,12 @@
-##Question 1-
+## Question 1-
 
 Items is  an array of objects with each object with an attribute text of type string. this items array is passed to List component and List component is rendering an unordered list,with list elements being SingleListItem components. Suitable props such as index of item, text of item, clickHandler and a boolean isSelected is passed.When we Click on an element,HandleClick is executed and index of that item is stored as selectedIndex.
 SingleListItem is rendering li and if the isSelected attribute of that element is true its background color is set as green , otherwise red. The content of the li is set as text prop passed to the SingleListItem.
 
 
-##Question 2-
+## Question 2-
 
-#Errors, warning and their correction -
+# Errors, warning and their correction -
 
 1- In wrappedsingleItem the onClickHandler(index) should  be wrapped in arrow functions.
 2- When usetate is used  selectedibdex should be passed before  setSelectedIndex when destructured assignment of usestate is done.
@@ -18,7 +18,7 @@ SingleListItem is rendering li and if the isSelected attribute of that element i
 5- When passing Props to singlelistItem component, index should be passed as a key prop to avoid warnings.
 6- In wrappedListComponent.proptypes Proptypes.array should be replaced with prototypes.ArrayOf and Proptypes.shapeOf should be replaced by Proptypes.shape.
 
-##Question 3- 
+## Question 3- 
 
 #Optimization -
 1- When passing Props to singlelistItem component, index should be passed as a key prop to avoid warnings.
