@@ -1,6 +1,6 @@
 
 import './App.css';
-import List from './List';
+import List from './Component/CorrectCode';
 
 function App() {
   const items=[{text:'revant'},{text:'revant2'},{text:'revant3'},{text:'revant4'},{text:'revant5'}]
