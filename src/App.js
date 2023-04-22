@@ -1,23 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
+import List from './List';
 
 function App() {
+  const items=[{text:'revant'},{text:'revant2'},{text:'revant3'},{text:'revant4'},{text:'revant5'}]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      app
+    <List items={items}/>
     </div>
   );
 }
