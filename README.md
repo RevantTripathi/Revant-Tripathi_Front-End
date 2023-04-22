@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Question 1-
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Items is  an array of objects with each object with an attribute text of type string. this items array is passed to List component and List component is rendering an unordered list,with list elements being SingleListItem components. Suitable props such as index of item, text of item, clickHandler and a boolean isSelected is passed.When we Click on an element,HandleClick is executed and index of that item is stored as selectedIndex.<br>
+SingleListItem is rendering li and if the isSelected attribute of that element is true its background color is set as green , otherwise red. The content of the li is set as text prop passed to the SingleListItem.
 
-## Available Scripts
 
-In the project directory, you can run:
+# Question 2-
 
-### `npm start`
+## Errors, warning and their correction -
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1- In wrappedsingleItem the onClickHandler(index) should  be wrapped in arrow functions.<br>
+2- When usetate is used  selectedibdex should be passed before  setSelectedIndex when destructured assignment of usestate is done.<br>
+3- As isSelected prop passed to SingleListItem is bool, instead of passing it as index, the output of this expression should be passed as is Selected prop-->               (index===selectedIndex)<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  Or simply-->
+  IsSelected={(index===selectedIndex)?true:false}<br>
+4- In wrapListComponent defaultProps, default value of items should be empty array [ ] instead of null, because map function will not work an array containing null.<br>
+5- When passing Props to singlelistItem component, index should be passed as a key prop to avoid warnings.<br>
+6- In wrappedListComponent.proptypes Proptypes.array should be replaced with prototypes.ArrayOf and Proptypes.shapeOf should be replaced by Proptypes.shape.<br>
 
-### `npm test`
+# Question 3- 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Optimization -
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1- When passing Props to singlelistItem component, index should be passed as a key prop to avoid warnings.<br>
+2- SingleListItem should be stored in a new jsx file and then exported to be used in List.jsx for increasing code readability, and more organised file structure.
